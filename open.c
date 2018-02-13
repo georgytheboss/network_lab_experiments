@@ -4,9 +4,10 @@
 #include <stdlib.h>
 
 void main(){
-	char *c[]= (char *) calloc(100,sizeof(char[10]));;
-	int fd = open("abc.txt",O_RDWR|O_CREAT);
-	int sz = read(fd, &c, 100);
-	printf("%s\n",c[0]);
+	char *c= (char *) calloc(100,sizeof(char));;
+	int fd = open("abc.data",O_RDWR|O_CREAT);
+	int sz = read(fd, c, 100);
+	sz = read(fd, c, 100);
+	printf("%s\n",c);
 	// printf("fd = %d\n",fd);
 }

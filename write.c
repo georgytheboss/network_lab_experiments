@@ -5,6 +5,6 @@
 
 void main(){
 	char a[10][10]={"Deon","Georgy","Mani"};
-	int fd = open("abc.txt",O_RDWR|O_CREAT);
+	int fd = open("abc.data",O_RDWR|O_CREAT);
 	int sz = write(fd,a,100);
 }
