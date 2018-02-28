@@ -1,15 +1,15 @@
-//gcc mypipe.c -o mypipe
+//gcc my_pipe.c -o my_pipe && ./my_pipe
 
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
 #include<unistd.h>
 #include<sys/types.h>
-void main(void){
-	int p[2],q[2],pid,i,len;
+void main(){
+	int p[2], q[2], pid, i, len;
 	pipe(p);
 	pipe(q);
-	char s1[10],s2[10],buff[10],c;
+	char s1[10], s2[10], buff[10], c;
 	pid=fork();
 	if(pid==0){
 		close(p[0]);
