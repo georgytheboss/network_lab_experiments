@@ -1,4 +1,6 @@
 //C Program for Message Queue(Reader Process)
+//gcc queue_reader.c -o queue_reader
+
 #include <stdio.h>
 #include <sys/ipc.h>
 #include <sys/msg.h>

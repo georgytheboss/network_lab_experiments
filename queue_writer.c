@@ -1,4 +1,6 @@
 //C Program for Message Queue(Writer Process)
+//gcc queue_writer.c -o queue_writer
+
 #include <stdio.h>
 #include <sys/ipc.h>
 #include <sys/msg.h>
