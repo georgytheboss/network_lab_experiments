@@ -12,6 +12,6 @@ void main(int argc, char *argv[]){
 	key_t key;
 	key=atoi(argv[1]);
 	shm=(char *)shmat(key,0,0);
-	printf("shared memcontents:PROCESS2:%s \n",shm);
+	printf("shared memcontents:PROCESS2:%s",shm);
 	printf("memid:%d",key);
 	}

@@ -1,3 +1,5 @@
+
+
 //gcc sharedmem_output.c -o sharedmem_output
 
 #include <stdio.h>
@@ -12,8 +14,8 @@ void main(int argc,char *argv[]){
 	key_t key;
 	key=IPC_PRIVATE;
 	shmid=shmget(key,1000,0666|IPC_CREAT);
-	printf("shared memory key=%d \n ",shmid);
+	printf("shared memory key= %d \n\n",shmid);
 	shm=(char *)shmat(shmid,0,0);
 	sprintf(shm,"running \n");
-	printf("shared memcontents:PROCESS:%s \n",shm);
+	printf("shared memcontents:PROCESS:%s",shm);
 	}

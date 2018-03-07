@@ -1,10 +1,10 @@
 //gcc my_pipe.c -o my_pipe && ./my_pipe
 
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
-#include<unistd.h>
-#include<sys/types.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/types.h>
 void main(){
 	int p[2], q[2], pid, i, len;
 	pipe(p);
