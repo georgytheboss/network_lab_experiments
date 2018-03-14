@@ -16,32 +16,33 @@ void main(){
 
 	msgid=msgget(IPC_PRIVATE,0777|IPC_CREAT);
 	if(msgid==2){
-		printf("fail");
+		printf("Fail");
 		exit(2);
 		}
 	p=fork();
 	if(p==-1){
-		printf("fork");
+		printf("Fork");
 		exit(1);
 		}
 	while(1){
 		if(p==0){
 			sleep(1);
-			printf("\n child: ");
+			printf("\nChild: ");
 			fgets(msg.mtext,50,stdin);
 			msg.mtype=1;
 			msgsnd(msgid,&msg,50,0);
 			sleep(1);
 			msgrcv(msgid,&msg2,50,0,IPC_NOWAIT);
-			printf("\n CHILD->PARENT : %s", msg2.mtext);
+			printf("\nCHILD->PARENT : %s\n", msg2.mtext);
 			sleep(1);
-			printf("parent:");
+			printf("Parent:");
 			fgets(msg2.mtext,50,stdin);
 			msg2.mtype=2;
 			msgsnd(msgid,&msg2,50,0);
 			sleep(1);
 			msgrcv(msgid,&msg,50,0,IPC_NOWAIT);
-			printf("\n parent->child : %s",msg.mtext);
+			printf("\nParent->Child : %s",msg.mtext);
 			}
 		}
 	}
+ 
