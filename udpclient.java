@@ -1,3 +1,4 @@
+// javac udpclient.java; java udpclient
 import java.io.*;
 import java.net.*;
 
