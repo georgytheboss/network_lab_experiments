@@ -17,7 +17,7 @@ public class udpclient{
 			DatagramPacket dp2 = new DatagramPacket(buf,1024);
 			ds2.receive(dp2);
 			String msg2 = new String(dp2.getData(),0,dp2.getLength());
-			System.out.println("Message returned from Server ::"+msg+" "+msg2);
+			System.out.println("Message returned from Server: "+msg+" "+msg2);
 			}
 
 		catch(Exception e){
